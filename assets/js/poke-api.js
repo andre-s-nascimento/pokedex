@@ -3,7 +3,7 @@ const pokeApi = {}
 
 function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.order
+    pokemon.number = String(pokeDetail.id).padStart(3, '0')
     // capitalize no JS se quiser receber no objeto
     // pokemon.name = pokeDetail.name.charAt(0).toUpperCase() + pokeDetail.name.slice(1) 
     pokemon.name = pokeDetail.name
